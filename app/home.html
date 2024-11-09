@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/base/base.css">
+    <link rel="stylesheet" href="styles/base/colors.css">
+    
+</head>
+<body>
+
+    <h1 class="main-h1">
+        Expense Tracker
+    </h1>
+
+    <div class="cards-container flex wrap center">
+        <div class="card flex column">
+            <h1 id="income" class="green"></h1>
+            <p>Income</p>
+        </div>
+        <div class="card flex column">
+            <h1 id="expenses" class="red"></h1>
+            <p>Expenses</p>
+        </div>
+        <div class="card flex column">
+            <h1 id="balance" class="green"></h1>
+            <p>Balance</p>
+        </div>
+        <div class="card flex column">
+            <h1 id="transactions" class="green">4000$</h1>
+            <p>Transactions</p>
+        </div>
+    </div>
+
+    <form id="budget_form" action="">
+        <div class="form-container flex center wrap">
+            <input type="text" id="budget_name" value="" placeholder="Budget Name">
+            <input type="text" id="budget_amount" value="" placeholder="Amount">
+            <input type="submit" id="add_income" value="Add Amount" class="green-button">
+        </div>
+    </form>
+    <form id="expense-form" action="">
+        <div class="form-container flex center wrap">
+            <input type="text" id="expense_name" value="" placeholder="Expense Name">
+            <input type="text" id="expense_amount" value="" placeholder="Amount">
+            <select name="" id="category">
+                <option value="grocery">grocery</option>
+                <option value="electrecity">electrecity</option>
+                <option value="water">water</option>
+                <option value="gas">gas</option>
+            </select>
+            <input type="date" id="date" placeholder="Date">
+            <input type="submit" id="add_expense" value="Add Expense" class="red-button">
+        </div>
+    </form>
+    
+    <div class="filter-div">
+        <label for="filter">Filter: </label>
+        <button class="" id="all">All</button>
+        <button class="" id="min">Min</button>
+        <button class="" id="max">Max</button>
+
+    </div>
+
+    <table id="table">
+        <tr>
+          <th>Expense Name</th>
+          <th>Amount</th>
+          <th>Category</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+
+
+      </table>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js" integrity="sha512-DdX/YwF5e41Ok+AI81HI8f5/5UsoxCVT9GKYZRIzpLxb8Twz4ZwPPX+jQMwMhNQ9b5+zDEefc+dcvQoPWGNZ3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
